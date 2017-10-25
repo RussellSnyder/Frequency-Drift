@@ -5,6 +5,7 @@ import {ContactComponent} from "./contact/contact.component";
 import {RecordsComponent} from "./records/records.component";
 import {ShowsComponent} from "./shows/shows.component";
 import {ImpressumComponent} from "./impressum/impressum.component";
+import {PressComponent} from "./press/press.component";
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
@@ -12,6 +13,7 @@ const appRoutes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'records', component: RecordsComponent},
   {path: 'shows', component: ShowsComponent},
+  {path: 'press', component: PressComponent},
   {path: 'impressum', component: ImpressumComponent},
 ];
 

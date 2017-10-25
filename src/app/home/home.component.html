@@ -1,3 +1,4 @@
-<p>
-  home works!
-</p>
+<div class="page home" *ngIf="siteData">
+  <h1>{{siteData[pageId].title}}</h1>
+  <div class="content" Markdown>{{siteData[pageId].content}}</div>
+</div>
