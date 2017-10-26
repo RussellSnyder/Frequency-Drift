@@ -1,9 +1,9 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-  <button class="navbar-toggler navbar-toggler-right" #navToggle type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-toggleable-sm navbar-light bg-faded">
+  <a class="navbar-brand" routerLink="/">Frequency Drift</a>
+  <button class="navbar-toggler navbar-toggler-right" (click)="toggleMenu()" #navToggle type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" routerLink="/">Frequency Drift</a>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div class="{{navCollapseClass}} navbar-collapse" id="navbarNavDropdown" #navCollapse>
     <ul class="navbar-nav">
       <li class="nav-item" routerLinkActive="active"><a class="nav-link" (click)="closeMenu($event)" routerLink="/records">Records</a></li>
       <li class="nav-item" routerLinkActive="active"><a class="nav-link" (click)="closeMenu($event)" routerLink="/contact">Contact</a></li>

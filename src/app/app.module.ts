@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MarkdownModule } from 'angular2-markdown';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {AppRoutingModule} from "./app-routing.module";
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import {DataService} from "./data.service";
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { PressComponent } from './press/press.component';
 import { NewletterComponent } from './newletter/newletter.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { NewletterComponent } from './newletter/newletter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [ContenfulService, DataService],
   bootstrap: [AppComponent]

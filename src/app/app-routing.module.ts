@@ -26,7 +26,7 @@ export class AppRoutingModule {
   constructor(private router: Router) {
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
-        this.scrollToTopOfPage();
+        // this.scrollToTopOfPage();
       }
     });
   }

@@ -1,6 +1,5 @@
-import {Component, forwardRef, Inject, Input, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {PageComponent} from "../page/page.component";
-import {ContenfulService} from "../contenful.service";
 
 
 @Component({

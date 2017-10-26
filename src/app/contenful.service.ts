@@ -10,6 +10,7 @@ const CONFIG = {
         'socialMedia',
         'impressum',
         'press',
+        'records'
     ]
 }
 
@@ -40,6 +41,10 @@ export class ContenfulService {
         let siteData = {};
         arrayOfData.forEach((item, index) => {
             let id = item.sys.contentType.sys.id;
+            if (CONFIG.contentTypeIds.indexOf(id) === -1) {
+                // stop if not using data type
+                return
+            }
             siteData[id] = item.fields
         })
         return siteData;

@@ -1,3 +1,11 @@
-<p>
-  records works!
-</p>
+<div class="records page container" *ngIf="siteData">
+  <h1>{{siteData.records.title}}</h1>
+  <div class="overview row">
+    <div class="record col-md-4" *ngFor="let record of siteData.records.records">
+      {{record.fields.title}}
+      <ul class="tracks">
+        <li *ngFor="let track of record.fields.tracks">{{track.fields.title}}</li>
+        </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+@import (reference) "../../../node_modules/lesshat/lesshat";
+
+.navbar-collapse {
+    overflow: hidden;
+    max-height: 0;
+    &.slideDown {
+        transition: max-height 1s ease-out;
+        max-height: 1000px;
+    }
+    @media (min-width: 768px) {
+        max-height: 1000px !important;
+    }
+}
